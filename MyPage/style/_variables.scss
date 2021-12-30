@@ -11,11 +11,6 @@ $red: rgb(229,17,21);
     src: url('./Sigma\ Five.otf');
 }
 
-@font-face {
-    font-family: Starjedi;
-    src: url('./Starjout.ttf');
-}
-
 @keyframes dark-flow{
     from { box-shadow: 0 0 10px $red; }
     50% { box-shadow: 0 0 16px $red; }
@@ -33,7 +28,6 @@ $red: rgb(229,17,21);
     50% { box-shadow: 0 0 16px $blue; }
     to { box-shadow: 0 0 10px $blue; }
 }
-
 
 @keyframes glow {
     from { box-shadow: 0 0 15px #43e0b1e6; }

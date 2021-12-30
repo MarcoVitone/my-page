@@ -6,7 +6,6 @@ const side = document.getElementById('side');
 const navImg = document.getElementById('nav-img');
 const cardBg = document.getElementsByClassName('img-front');
 
-
 const enableDarkMode = () => {
     document.body.classList.add('dark');
     localStorage.setItem('darkMode', 'enabled');
@@ -58,7 +57,7 @@ window.onscroll = function() {
 }
 
 //hamburger menu
-let ham = localStorage.getItem('darkMode');
+let ham = localStorage.getItem('ham');
 
 const hamburger = document.getElementById('hamburger');
 const menu = document.getElementById('menu');
@@ -69,6 +68,9 @@ const openMenu = () => {
   localStorage.setItem('ham', 'open');
   menu.style.display = 'initial'; 
   darkToggle.style.display = 'initial';
+  darkToggle.style.position = 'relative';
+  darkToggle.style.top = '80vh';
+  darkToggle.style.right = '0.5vw';
 };
 
 const closeMenu = () => {
