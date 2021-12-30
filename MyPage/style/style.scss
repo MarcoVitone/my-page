@@ -1,0 +1,26 @@
+@import "./variables";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: starwars;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    color: #FFDE06;
+    background-color: rgba(67, 224, 177, 0.3);
+    
+}
+
+@import "./navbar";
+@import "./main";
+@import "./footer";
+@import "./form";
+@import "./checkbox";
+@import "./dark";
+@import "./project";
+@import "./project/style/style-clock";
+@import "./project/style/style-calc";

@@ -1,0 +1,160 @@
+@import "./variables";
+
+.dark{
+    background-color: rgb(0, 0, 0);
+    color: $red;
+    transition: background 0.2s linear;
+
+    #skills{
+        background-image: url("../img/Exegol.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .container{
+        background-image: url("../img/dark.png"), url("../img/dark.png");
+        background-repeat:  no-repeat;
+        background-attachment: fixed;
+
+        &-navbar{
+            background: linear-gradient(to top, rgba(254,254,254,0) 0%,rgba(229,17,21,1) 30%,rgba(229,17,21,1) 47%,rgba(229,17,21,1) 71%);
+            
+            h2, a{
+                color: rgb(0, 0, 0);
+            }
+        
+            a:hover{
+                background-color: rgba(0, 0, 0, 0.8);
+                color: $red;
+            }
+            
+            &-menu{
+                background-color: $red;
+            }
+
+            &-hamburger{
+                div{
+                    background-color: #111;
+                    box-shadow: 0 0 10px #111;
+                }
+            }
+        }
+    
+        &-main{
+            &-hero{
+                &-link{
+                    h2{
+                        color: $red;
+                    }
+
+                    img{
+                        background-color: $red;
+                        animation-name: dark-flow;
+                        animation-duration: 2s;
+                        animation-iteration-count: infinite;
+                    }
+                } 
+                
+                &-menu{
+                    @include w930px{
+                        display: none;
+                        width: 30vw;
+                        height: 110vh;
+                        background-color: $red;
+                        position: fixed;
+                        top: 0;
+                        right: 0;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        align-items: center;
+                    }
+                }
+            }
+            
+            &-description{
+                background-color: $red;
+                color: #111;
+
+                p{
+                    color: #111;
+                }
+            }
+
+            &-skills{
+                background: rgba(0, 0, 0, 0.7);
+
+                ul{
+                    li{
+                        .bar{
+                            .bar-charge{
+                                background-color: $red;
+                                animation: dark-flow;
+                                animation-duration: 2s;
+                                animation-iteration-count: infinite;     
+                                
+                                h6{
+                                    color: #111;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .card .face{
+            background-color: $red;
+        }
+
+        .card .face.front::before{
+            border: 2px solid #111;
+        }
+
+        .card .face.front::after{
+            border-top: 5px solid #111;
+            border-bottom: 5px solid #111;
+        }
+
+        .card .face.back{
+            background: $red;
+        }
+
+        &-form{
+            color: #111;
+            background-color: $red;
+
+            input{
+                background-color: $red;
+                border: 2px solid #111;
+            }
+
+            textarea{
+                background-color: $red;
+                border: 2px solid #111;
+            }
+
+            button{
+                background-color: $red;
+                border: 2px solid #111;
+                animation-name: dark-flow-black;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+
+            ::placeholder{
+                color: rgba(0, 0, 0, 0.8);
+            }
+        }
+        
+        &-footer{
+            background: linear-gradient(to top, rgba(229, 17, 21, 1) 0%,rgba(254, 254, 254, 0.7) 50%,rgba(229, 17, 21, 1) 100%);
+            animation-name: dark-flow;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+
+            h4, h6{
+                color: rgb(0, 0, 0);
+            }
+        }
+    }
+}

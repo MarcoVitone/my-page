@@ -1,0 +1,28 @@
+@import "./variables";
+@import "./media-queries";
+
+.hamburger{
+    width: 1.5em;
+    height: 1.5em;
+
+    &-1{
+        height: 0.4em;
+        width: 100%;
+        border-radius: 0.2em;
+        background-color: $light-blue;
+    }
+
+    &-2{
+        height: 0.4em;
+        width: 100%;
+        border-radius: 0.2em;
+        background-color: $green;
+    }
+
+    &-3{
+        height: 0.4em;
+        width: 100%;
+        border-radius: 0.2em;
+        background-color: $violet;
+    }
+}

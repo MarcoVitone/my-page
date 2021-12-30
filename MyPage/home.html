@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Marco Vitone</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <div id="navbar" class="container-navbar">
+            <div class="container-navbar-logo">
+                <img id="nav-img" src="./img/profile.jpg" alt="">
+                <h2>Marco Vitone</h2>
+            </div>
+            <ul id="menu" class="container-navbar-menu">
+                <div>
+                    <li class="container-navbar-menu-li"><a href="#home">Home</a></li>
+                </div>
+                <div>
+                    <li class="container-navbar-menu-li"><a href="#about">About</a></li>
+                </div>
+                <div>
+                    <li class="container-navbar-menu-li"><a href="#skills">Skills</a></li>
+                </div>
+                <div>
+                    <li class="container-navbar-menu-li"><a href="#project">Project</a></li>
+                </div>
+                <div>
+                    <li class="container-navbar-menu-li"><a href="#contacts">Contacts</a></li>
+                </div>
+                               
+                <!-- Dark Mode -->
+                <div id="dark-mode-toggle" class="container-checkbox">
+                    <input type="checkbox" class="checkbox" id="checkbox">
+                    <label class="label" for="checkbox"><i class="fas fa-jedi"></i><i class="fab fa-sith"></i><div class="ball"></div></label>
+                </div>
+            </ul>
+            
+            <!-- Hamburger menu -->
+            <div id="hamburger" class="container-navbar-hamburger">
+                <div class="container-navbar-hamburger-1"></div>
+                <div class="container-navbar-hamburger-2"></div>
+                <div class="container-navbar-hamburger-3"></div>
+            </div>
+        </div>
+
+
+        
+        <!-- Main -->
+
+        <!-- Hero -->
+        <div id="home" class="container-main">
+            <div class="container-main-hero">
+                <marquee class="container-main-hero-title" direction="up" scrollamount="10" onmouseover="this.stop()"  onmouseout="this.start()">
+                    <h1 id="presentation">Ciao sono Marco e tu sei il benvenuto sulla mia pagina.</h1>
+                    <h1 id="side">Questo è il lato chiaro della forza attento a passare al lato oscuro!!</h1>
+                    <h1>Al momento sono uno studente in WEB DEVELOPMENT...</h1>
+                </marquee>
+                <div class="container-main-hero-link">
+                        <h2>Le mie pagine...</h2>
+                        <a href="https://github.com/MarcoVitone"><img id="github" src="./img/github.png" alt=""></a>
+                        <a href="https://www.linkedin.com/in/marco-vitone-397833b2/"><img id="linkedin" src="./img/linkedin.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- About -->
+        <div id="about">
+            <div class="container-main">
+                <div class="container-main-description">
+                    <h1>About me...</h1>
+                    <p>Mi presento sono Marco Vitone e vivo in un piccolo paese del Molise. Dopo alcune esperienze lavorative tra
+                        edilizia ed assicurazioni ho preso la decisione di studiare programmazione, nello specifico web development.
+                        Il mio studio è iniziato e sta proseguendo su UniversApp!! Al momento i linguaggi da me conosciuti sono
+                        HTML5, CSS, JavaScript ed i fondamenti di C. Al momento sono intenzionato nel migliorare in JS e la mia
+                        intenzione è quella di imparare al meglio linguaggi di backend come phyton!!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div id="skills">
+            <div class="container-main">
+                <div class="container-main-skills">
+                    <ul>
+                        <li>HTML<div class="bar">
+                            <div id="html" class="bar-charge"><h6>80%</h6></div></div></li>
+                        <li>CSS<div class="bar">
+                            <div id="css" class="bar-charge"><h6>70%</h6></div></div>
+                        </li>                         
+                        <li>JAVASCRIPT<div class="bar">
+                            <div id="javascript" class="bar-charge"><h6>60%</h6></div></div></li>                       
+                        <li>C<div class="bar">
+                            <div id="c" class="bar-charge"><h6>5%</h6></div>
+                        </div></li>                        
+                        <li>PHOTOSHOP<div class="bar">
+                            <div id="photoshop" class="bar-charge"><h6>15%</h6></div>
+                        </div></li>                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project -->
+        <div id="project">
+            <div class="container-main">
+                <div class="container-main-project">
+                    <div class="card">
+                        <div class="face front">
+                            <img id="ca" class="img-front" src="./img/jedi-symbol.png" alt="">
+                        </div>
+                        <div class="face back">
+                            <div class="clock">
+                                <div class="hours">
+                                    <h1 class="litle-box" id="hour"></h1>
+                                    <h1>:</h1>
+                                    <h1 class="litle-box" id="minutes"></h1>
+                                    <h1>:</h1>
+                                    <h1 class="litle-box" id="second"></h1>
+                                </div>
+                                <div class="date">
+                                    <h1 class="big-box" id="day"></h1>
+                                    <h1 class="litle-box" id="day-num"></h1>
+                                    <h1>-</h1>
+                                    <h1 class="litle-box" id="month"></h1>
+                                    <h1>-</h1>
+                                    <h1 class="big-box" id="year"></h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="face front">
+                            <img class="img-front" src="./img/jedi-symbol.png" alt="">
+                        </div>
+                        <div class="face back">
+                            <form name="form">
+                                <div class="back-display">
+                                    <input type="text" class="area" name="area" value="" placeholder="0">
+                                </div>
+                                <div class="back-calc">
+                                    <div class="back-calc-first-line">
+                                        <input type="button" value="7" onclick="add(7)">
+                                        <input type="button" value="8" onclick="add(8)">
+                                        <input type="button" value="9" onclick="add(9)">
+                                        <input type="button" value="AC" onclick="del()">
+                                        <input type="button" value="C" onclick="canc()">
+                                        <input type="button" value="^2" onclick="pow2()">
+                                    </div>
+                                    <div class="back-calc-second-line">
+                                        <input type="button" value="4" onclick="add(4)">
+                                        <input type="button" value="5" onclick="add(5)">
+                                        <input type="button" value="6" onclick="add(6)">
+                                        <input type="button" value="*" onclick="addOp('*')">
+                                        <input type="button" value="/" onclick="addOp('/')">
+                                        <input type="button" value="^3" onclick="pow3()">
+                                    </div>
+                                    <div class="back-calc-third-line">
+                                        <input type="button" value="1" onclick="add(1)">
+                                        <input type="button" value="2" onclick="add(2)">
+                                        <input type="button" value="3" onclick="add(3)">
+                                        <input type="button" value="+" onclick="addOp('+')">
+                                        <input type="button" value="-" onclick="addOp('-')">
+                                        <input type="button" value="√" onclick="sqrt()">
+                                    </div>
+                                    <div class="back-calc-fourth-line">
+                                        <input type="button" value="0" onclick="add(0)">
+                                        <input type="button" value="00" onclick="add('00')">
+                                        <input type="button" value="." onclick="add('.')">
+                                        <input type="button" value="=" onclick="ris('=')">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contacts -->
+        <div id="contacts">
+            <form action="" class="container-form">
+                <div class="container-form-name">
+                    <label for="fname">First Name:</label>
+                    <input type="text" placeholder="Insert your first name..." required>
+                    <label for="lname">Last Name:</label>
+                    <input type="text" placeholder="Insert your last name..." required>
+                </div>
+                <div class="container-form-email">
+                    <label for="email">E-mail:</label>
+                    <input type="email" placeholder="Insert your email..." required>
+                </div>
+                <div class="container-form-textarea">
+                    <label for="info">Info:</label>
+                    <textarea name="info" id="info" cols="80" rows="10" placeholder="Insert your info..."></textarea>
+                </div>
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+    
+        <!-- Footer -->
+        <div class="container-footer">
+            <h4>Made in Neverland (Molise)</h4>
+            <h6>Since 2021</h6>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/project/appCalc.js"></script>
+    <script src="./js/project/appClock.js"></script>
+</body>
+</html>

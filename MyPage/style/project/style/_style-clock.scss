@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: digital;
+    src: url('../style/digital-7.ttf');
+}
+
+body{
+    color: rgb(18, 247, 10);
+}
+
+.clock{
+    font-family: digital;
+    background-color: rgb(34, 31, 31);
+    padding: 15px;
+    box-shadow: inset -5px -5px rgb(61, 56, 56),
+                inset 5px 5px rgb(61, 56, 56);
+}
+
+.date{
+    display: flex;
+    flex-direction: row;
+}
+
+.hours{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.litle-box{
+    width: 20px;
+}
+
+.big-box{
+    width: 40px;
+}
+
+h1{
+    font-size: 20px;
+    /* padding: 5px; */
+    text-align: center;
+}

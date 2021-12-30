@@ -1,0 +1,57 @@
+$blue: rgb(32, 73, 217);
+$violet: rgb(202, 116, 221);
+$light-blue: rgb(67, 224, 177);
+$green: rgb(135, 220, 90);
+$yellow: rgb(255, 222, 6);
+$red: rgb(229,17,21);
+
+
+@font-face {
+    font-family: starwars;
+    src: url('./Sigma\ Five.otf');
+}
+
+@font-face {
+    font-family: Starjedi;
+    src: url('./Starjout.ttf');
+}
+
+@keyframes dark-flow{
+    from { box-shadow: 0 0 10px $red; }
+    50% { box-shadow: 0 0 16px $red; }
+    to { box-shadow: 0 0 10px $red; }
+}
+
+@keyframes flow{
+    from { box-shadow: 0 0 10px #3784d6; }
+    50% { box-shadow: 0 0 16px #3784d6; }
+    to { box-shadow: 0 0 10px #3784d6; }
+}
+
+@keyframes bar-shadow{
+    from { box-shadow: 0 0 10px $blue; }
+    50% { box-shadow: 0 0 16px $blue; }
+    to { box-shadow: 0 0 10px $blue; }
+}
+
+
+@keyframes glow {
+    from { box-shadow: 0 0 15px #43e0b1e6; }
+    50% { box-shadow: 0 0 21px #43e0b1e6; }
+    to { box-shadow: 0 0 15px #43e0b1e6; }
+}
+
+@keyframes dark-flow-black{
+        from { box-shadow: 0 0 10px #111; }
+        50% { box-shadow: 0 0 16px #111; }
+        to { box-shadow: 0 0 10px #111; }
+    }
+
+@keyframes charging-bar {
+    0% {
+        width: 0vw;
+    }
+    100% {
+        width: 100vw;
+    }
+}

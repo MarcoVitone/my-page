@@ -1,0 +1,264 @@
+@import "./variables";
+@import "./media-queries";
+
+.container{
+    background: url("../img/white.png") left, url("../img/white.png") right;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+
+    #skills{
+        background-image: url("../img/Dagobah.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &-main{
+        height: 100vh;
+        position: relative;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        &-hero{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            &-title{
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 80%;
+                transform-style: preserve-3d;
+                transform: rotateX(45deg);
+                background-image: url(../img/space.png);
+                border-radius: 50px;
+
+                @include w450px{
+                    width: 90%;
+                    height: 80%;
+                }
+        
+                h1{
+                    margin-bottom: 10px;
+                    font-size: 35px;
+                    text-align: center;
+                    line-height: 60px;
+                    transform-style: preserve-3d;
+                    transform: rotateX(45deg);
+
+                    @include w650px{
+                        font-size: 25px;
+                    }
+                }
+    
+            }
+
+            &-link{
+                height: 20%;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: last baseline;
+                display: inline;
+
+                @include w450px{
+                    margin-top: 0;
+                }
+
+                    h2{
+                        color: $blue;
+                        margin-bottom: 2em;
+
+                        @include w450px{
+                            margin-bottom: 0.5em;
+                        }
+                    }
+
+                    a{
+                        margin:auto;
+                        margin-right: 2em;                        
+                        
+                        img{
+                            height: 60px;
+                            width: 60px;                            
+                            background-color: white;
+                            animation-name: flow;
+                            animation-duration: 2s;
+                            animation-iteration-count: infinite;
+    
+                        }
+    
+                        #github{
+                            border-radius: 50%;
+                        }
+    
+                        #linkedin{
+                            border-radius: 25%;
+                        }        
+                    }   
+            }
+        }
+
+        
+        &-description{
+            width: 85%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: $blue;
+            border-radius: 0% 40% 0% 40%;
+
+            @include w930px{
+                width: 70%;
+                height: 90%;
+                border-radius: 2em 2em 2em 2em;
+            }
+
+            @include w450px{
+                width: 90%;
+                border-radius:  2em 2em 2em 2em;
+                background-color: rgba($color: $blue, $alpha: 0.8);
+            }
+
+            h1{
+                font-size: 35px;
+
+                @include w1420px{
+                    font-size: 30px;
+                }
+
+                @include w450px{
+                    font-size: 25px;
+                }
+
+            }
+
+            p{  
+                width: 75%;
+                color: $green;
+                font-size: 30px;
+                text-align: center;
+                line-height: 50px;
+                word-wrap: break-word;
+
+                @include w1420px{
+                    font-size: 20px;
+                }
+
+                @include w930px{
+                    width: 80%;
+                    line-height: 30px;
+                    margin-top: 10px;
+                }
+
+                @include w450px{
+                    width: 90%;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &-skills{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+        
+            ul{
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                li{
+                    list-style-type: none;
+                    font-size: 36px;
+                    line-height: 40px;
+                    margin-bottom: 1em;
+
+                    @include w930px{
+                        font-size: 25px;
+                    }
+
+                    @include w650px{
+                        font-size: 20px;
+                    }
+
+                    .bar{
+                        width: 100%;
+                        height: 0.8em;
+                        background-color: rgba(43, 41, 41, 1.0);
+                        border-radius: 0.4em;
+
+                        @include w450px{
+                            line-height: 1em;
+                        }
+                        
+                        
+                        .bar-charge{
+                            background-color: $blue;
+                            animation: bar-shadow;
+                            animation-duration: 2s;
+                            animation-iteration-count: infinite;
+                            
+                            h6{
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: end;
+                                margin-right: 0.5em;
+
+                                @include w450px{
+                                    margin: 0;
+                                }
+                            }
+                        }
+
+                        #html{
+                            width: 80%;
+                            height: 0.8em;
+                            border-radius: 0.4em;                         
+                        }
+
+                        #css{
+                            width: 70%;
+                            height: 0.8em;
+                            border-radius: 0.4em;                           
+                        }
+
+                        #javascript{
+                            width: 60%;
+                            height: 0.8em;
+                            border-radius: 0.4em;                           
+                        }
+
+                        #c{
+                            width: 5%;
+                            height: 0.8em;
+                            border-radius: 0.4em;                           
+                        }
+
+                        #photoshop{
+                            width: 15%;
+                            height: 0.8em;
+                            border-radius: 0.4em;                           
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

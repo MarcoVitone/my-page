@@ -1,0 +1,103 @@
+@import "./media-queries";
+
+.container-main-project{
+    height: 90vh;
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    @include w930px{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.card{
+    width: 300px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    cursor: pointer;
+
+    @include w930px{
+        margin-bottom: 20px;
+    }
+}
+
+.card .face{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform: perspective(500px) rotateY(0);
+    backface-visibility: hidden;
+    transition: all 0.5s ease-in-out;
+    background-color: $blue;
+}
+
+.card .face.front{
+    transform: perspective(500px) rotateY(0);
+}
+
+.card .face.front::before{
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background: transparent;
+    border: 2px solid $green;
+}
+
+.card .face.front::after{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: transparent;
+    border-top: 5px solid $green;
+    border-bottom: 5px solid $green;
+}
+
+.card .face.front img{
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.card .face.back{
+    text-align: center;
+    background: $green;
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.card .face.back h3{
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+.card .face.back span{
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+}
+
+.card:hover .face.front{
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.card:hover .face.back{
+    transform: perspective(500px) rotateY(360deg);
+}
+
+

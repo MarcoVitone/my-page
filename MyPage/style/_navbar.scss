@@ -1,0 +1,147 @@
+@import "./variables";
+@import "./media-queries";
+
+.container{
+    &-navbar{
+        height: 10vh;
+        width: 100vw;
+        position: fixed;
+        z-index: 100;
+        margin: auto;
+        display: flex;
+        flex: row;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(to top, rgba(254,254,254,0) 0%,rgba(32,73,217,1) 0%,rgba(32,73,217,1) 47%,rgba(32,73,217,1) 100%);
+        animation-name: charging-bar;
+        animation-duration: 3s; 
+    
+        &-logo{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-left: 5em;
+
+            @include w650px{
+                padding-left: 2em;
+                width: 70%;
+            }
+
+            @include w450px{
+                padding-left: 0.5em;
+            }
+
+            img{
+                height: 10vh;
+                width: auto;
+                border-radius: 50%;
+
+                @include w450px{
+                    height: 6vh;
+                }
+            }
+
+            h2{
+                font-family: Starjedi;
+                color: $yellow;
+                padding-left: 1em;
+                letter-spacing: 0.3em;
+
+                @include w450px{
+                    font-size: 23px;
+                }
+            }
+        }
+    
+        &-menu{
+            display: flex;
+            flex-direction: row;
+            padding-right: 5em;           
+
+            @include w930px{
+                display: none;
+                width: 30vw;
+                height: 110vh;
+                background-color: $blue;
+                position: fixed;
+                top: 0;
+                right: 0;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                padding-top: 5em;
+                transition: background 0.5s linear;
+            }
+    
+            &-li{
+                padding-left: 25px;
+                list-style: none;
+
+                @include w930px{
+                    height: 80%;
+                    width: 80%;
+                    padding: 0;
+                    margin-bottom: 3em;
+                }
+    
+                a{
+                    text-decoration: none;
+                    padding: 15px 10px;
+                    color: #FFDE06;
+                }
+
+                a:hover{
+                    background-color: $violet;
+                    border-radius: 25% 60% 60% 25%;
+                }
+            }
+        } 
+        
+        &-hamburger{
+            width: 3em;
+            height: 3em;
+            display: none;
+            position: relative;
+            top: 1vh;
+
+            @include w930px{
+                display: initial;
+                right: 5em;             
+            }
+
+            @include w650px{
+                right: 2em;
+            }
+
+            @include w450px{
+                right: 1em;
+            }
+
+            &-1{
+                height: 0.6em;
+                width: 100%;
+                border-radius: 0.2em;
+                background-color: $light-blue;
+                margin-bottom: 0.3em;
+                box-shadow: 0 0 10px $light-blue;
+            }
+
+            &-2{
+                height: 0.6em;
+                width: 100%;
+                border-radius: 0.2em;
+                background-color: $green;
+                margin-bottom: 0.3em;
+                box-shadow: 0 0 10px $green;
+            }
+
+            &-3{
+                height: 0.6em;
+                width: 100%;
+                border-radius: 0.2em;
+                background-color: $violet;
+                box-shadow: 0 0 10px $violet;
+            }
+        }
+    }
+}
