@@ -4,24 +4,13 @@
     &-checkbox{
         height: 1vh;
         width: 5vw;
-        position: fixed;
-        top: 11vh;
-        right: 10vw;
-        display: flex;
-        justify-content: flex-end;
-        z-index: 100;
-
-        @include w930px{
-            display: none;
-            width: 6vw;
-        }
 
         .checkbox{
             display: none;
         }
 
         .label{
-            background-color: $red;
+            background-color: $black;
             opacity: 0.9;
 	        border-radius: 50px;
 	        cursor: pointer;
@@ -65,7 +54,7 @@
         }
 
         .fa-sith{
-            color: #111;
+            color: $red;
         }
     }
 }

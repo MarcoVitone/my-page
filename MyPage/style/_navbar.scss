@@ -13,8 +13,6 @@
         justify-content: space-between;
         align-items: center;
         background: linear-gradient(to top, rgba(254,254,254,0) 0%,rgba(32,73,217,1) 0%,rgba(32,73,217,1) 47%,rgba(32,73,217,1) 100%);
-        animation-name: charging-bar;
-        animation-duration: 3s; 
     
         &-logo{
             display: flex;
@@ -60,29 +58,11 @@
 
             @include w930px{
                 display: none;
-                width: 30vw;
-                height: 110vh;
-                background-color: $blue;
-                position: fixed;
-                top: 0;
-                right: 0;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-                padding-top: 5em;
-                transition: background 0.5s linear;
             }
     
             &-li{
                 padding-left: 25px;
                 list-style: none;
-
-                @include w930px{
-                    height: 80%;
-                    width: 80%;
-                    padding: 0;
-                    margin-bottom: 3em;
-                }
     
                 a{
                     text-decoration: none;
@@ -117,30 +97,72 @@
                 right: 1em;
             }
 
-            &-1{
-                height: 0.6em;
-                width: 100%;
-                border-radius: 0.2em;
-                background-color: $light-blue;
-                margin-bottom: 0.3em;
-                box-shadow: 0 0 10px $light-blue;
+            &-line{
+                z-index: 1000;
+
+                &-1{
+                    height: 0.6em;
+                    width: 100%;
+                    border-radius: 0.2em;
+                    background-color: $light-blue;
+                    margin-bottom: 0.3em;
+                    box-shadow: 0 0 10px $light-blue;
+                }
+    
+                &-2{
+                    height: 0.6em;
+                    width: 100%;
+                    border-radius: 0.2em;
+                    background-color: $green;
+                    margin-bottom: 0.3em;
+                    box-shadow: 0 0 10px $green;
+                }
+    
+                &-3{
+                    height: 0.6em;
+                    width: 100%;
+                    border-radius: 0.2em;
+                    background-color: $violet;
+                    box-shadow: 0 0 10px $violet;
+                }
             }
 
-            &-2{
-                height: 0.6em;
-                width: 100%;
-                border-radius: 0.2em;
-                background-color: $green;
-                margin-bottom: 0.3em;
-                box-shadow: 0 0 10px $green;
-            }
 
-            &-3{
-                height: 0.6em;
-                width: 100%;
-                border-radius: 0.2em;
-                background-color: $violet;
-                box-shadow: 0 0 10px $violet;
+            &-list{
+                display: none;
+                width: 30vw;
+                height: 110vh;
+                background-color: $blue;
+                position: fixed;
+                top: 0;
+                right: 0;
+                padding-top: 5em;
+                transition: background 0.5s linear;
+                z-index: -100;
+                
+                ul{
+                    height: 60%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    li{
+                        list-style: none;
+                        
+                        a{
+                            text-decoration: none;
+                            padding: 2em;
+                            color: #FFDE06;
+                        }
+        
+                        a:hover{
+                            background-color: $violet;
+                            border-radius: 25% 60% 60% 25%;
+                        }
+                    }
+                }
+
             }
         }
     }

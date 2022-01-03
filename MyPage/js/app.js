@@ -14,7 +14,10 @@ const enableDarkMode = () => {
     for(i=0; i < cardBg.length; i++) {
       cardBg[i].src = './img/sith-symbol.png';
     }
-
+    document.getElementById('label').style.backgroundColor = 'rgb(255, 222, 6)';
+    document.getElementById('label').style.transform = 'translateX(24px)';
+    document.getElementById('label').style.transform = 'scale(1.3)';
+    document.getElementById('ball').style.transform = 'translateX(24px)';
 };
 
 const disableDarkMode = () => {
@@ -25,6 +28,10 @@ const disableDarkMode = () => {
     for(i=0; i < cardBg.length; i++) {
       cardBg[i].src = './img/jedi-symbol.png';
     }
+    document.getElementById('label').style.backgroundColor = '#111';
+    document.getElementById('label').style.transform = 'translateX(0)';
+    document.getElementById('label').style.transform = 'scale(1.3)';
+    document.getElementById('ball').style.transform = 'translateX(0)';
 };
 
 if(darkMode === 'enabled') {
@@ -48,36 +55,26 @@ window.onscroll = function() {
   let currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("navbar").style.top = "0";
-    document.getElementById("dark-mode-toggle").style.top = "11vh";
   } else {
     document.getElementById("navbar").style.top = "-10vh";
-    document.getElementById("dark-mode-toggle").style.top = "-11vh";
   }
   prevScrollpos = currentScrollPos;
 }
 
 //hamburger menu
 let ham = localStorage.getItem('ham');
-
 const hamburger = document.getElementById('hamburger');
 const menu = document.getElementById('menu');
-const darkToggle = document.getElementById('dark-mode-toggle');
 
 const openMenu = () => {
-  console.log('open');
   localStorage.setItem('ham', 'open');
   menu.style.display = 'initial'; 
-  darkToggle.style.display = 'initial';
-  darkToggle.style.position = 'relative';
-  darkToggle.style.top = '80vh';
-  darkToggle.style.right = '0.5vw';
 };
 
 const closeMenu = () => {
-  console.log('close');
+  document.body.style.width = '100vw';
   localStorage.setItem('ham', null);
   menu.style.display = 'none'; 
-  darkToggle.style.display = 'none';
 }; 
 
 hamburger.addEventListener('click', () => {
@@ -87,4 +84,6 @@ hamburger.addEventListener('click', () => {
   } else{
     closeMenu();
   }
-})
+});
+
+

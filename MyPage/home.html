@@ -18,7 +18,7 @@
                 <img id="nav-img" src="./img/profile.jpg" alt="">
                 <h2>Marco Vitone</h2>
             </div>
-            <ul id="menu" class="container-navbar-menu">
+            <ul class="container-navbar-menu">
                 <div>
                     <li class="container-navbar-menu-li"><a href="#home">Home</a></li>
                 </div>
@@ -33,20 +33,45 @@
                 </div>
                 <div>
                     <li class="container-navbar-menu-li"><a href="#contacts">Contacts</a></li>
-                </div>
-                               
+                </div>                 
+                <div>
+                    <li class="container-navbar-menu-li">
+                        <div class="container-checkbox">
+                        <input type="checkbox" class="checkbox" id="checkbox">
+                        <label class="label" for="checkbox"><i class="fas fa-jedi"></i><i class="fab fa-sith"></i><div class="ball"></div></label>
+                        </div>
+                    </li>
+                </div>                
             </ul>
+
             <!-- Dark Mode -->
-            <div id="dark-mode-toggle" class="container-checkbox">
+            <!-- <div id="dark-mode-toggle" class="container-checkbox">
                 <input type="checkbox" class="checkbox" id="checkbox">
                 <label class="label" for="checkbox"><i class="fas fa-jedi"></i><i class="fab fa-sith"></i><div class="ball"></div></label>
-            </div>
+            </div> -->
             
             <!-- Hamburger menu -->
-            <div id="hamburger" class="container-navbar-hamburger">
-                <div class="container-navbar-hamburger-1"></div>
-                <div class="container-navbar-hamburger-2"></div>
-                <div class="container-navbar-hamburger-3"></div>
+            <div  class="container-navbar-hamburger">
+                <div id="hamburger" class="container-navbar-hamburger-line">
+                    <div class="container-navbar-hamburger-line-1 line"></div>
+                    <div class="container-navbar-hamburger-line-2 line"></div>
+                    <div class="container-navbar-hamburger-line-3 line"></div>
+                </div>
+                <div id="menu" class="container-navbar-hamburger-list">
+                    <ul>
+                        <li><a href="#home">Home</a></li>                        
+                        <li><a href="#about">About</a></li>                        
+                        <li><a href="#skills">Skills</a></li>                        
+                        <li><a href="#project">Project</a></li>                        
+                        <li><a href="#contacts">Contacts</a></li>
+                        <li>
+                            <div class="container-checkbox">
+                                <input type="checkbox" class="checkbox" id="checkbox">
+                                <label id="label" class="label" for="checkbox"><i class="fas fa-jedi"></i><i class="fab fa-sith"></i><div id="ball" class="ball"></div></label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
